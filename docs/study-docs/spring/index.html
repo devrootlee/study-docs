@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-study-docs/spring" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Spring Framework 핵심 개념 정리 | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://devrootlee.github.io/study-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://devrootlee.github.io/study-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://devrootlee.github.io/study-docs/docs/study-docs/spring"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Spring Framework 핵심 개념 정리 | My Site"><meta data-rh="true" name="description" content="---"><meta data-rh="true" property="og:description" content="---"><link data-rh="true" rel="icon" href="/study-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://devrootlee.github.io/study-docs/docs/study-docs/spring"><link data-rh="true" rel="alternate" href="https://devrootlee.github.io/study-docs/docs/study-docs/spring" hreflang="en"><link data-rh="true" rel="alternate" href="https://devrootlee.github.io/study-docs/docs/study-docs/spring" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spring","item":"https://devrootlee.github.io/study-docs/docs/study-docs/spring"}]}</script><link rel="alternate" type="application/rss+xml" href="/study-docs/blog/rss.xml" title="My Site RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/study-docs/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/study-docs/assets/css/styles.ba795a2b.css">
+<script src="/study-docs/assets/js/runtime~main.d7247228.js" defer="defer"></script>
+<script src="/study-docs/assets/js/main.692da098.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/study-docs/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/study-docs/"><div class="navbar__logo"><img src="/study-docs/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/study-docs/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">LeeRoot</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/study-docs/docs/study-docs/java">Study</a><a class="navbar__item navbar__link" href="/study-docs/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/study-docs/docs/study-docs/java">Language</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/study-docs/docs/study-docs/rdbms">Database</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/study-docs/docs/study-docs/spring">Framework</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/study-docs/docs/study-docs/spring">Spring</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/study-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Framework</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Spring</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Spring Framework 핵심 개념 정리</h1></header>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="spring-framework란">Spring Framework란?<a href="#spring-framework란" class="hash-link" aria-label="Direct link to Spring Framework란?" title="Direct link to Spring Framework란?">​</a></h3>
+<p><strong>Spring Framework</strong>는 자바 엔터프라이즈 애플리케이션 개발을 위한 <strong>오픈 소스 애플리케이션 프레임워크</strong>입니다. 자바 개발을 더 효율적이고 생산적으로 할 수 있도록 다양한 기능과 모듈을 제공하며, 특히 **DI(의존성 주입)**와 **AOP(관점 지향 프로그래밍)**를 통해 객체 지향 원칙을 잘 적용할 수 있도록 돕습니다.</p>
+<ul>
+<li><strong>주요 목표</strong>:<!-- -->
+<ul>
+<li><strong>POJO(Plain Old Java Object)</strong> 기반 개발을 통해 특정 기술에 종속되지 않고 유연하게 개발.</li>
+<li><strong>엔터프라이즈 개발의 복잡성 감소</strong>: EJB(Enterprise JavaBeans)의 복잡성을 해결하고 단순화된 개발 모델 제공.</li>
+<li><strong>테스트 용이성</strong>: DI를 통해 객체 간 결합도를 낮춰 단위 테스트를 쉽게 할 수 있도록 지원.</li>
+<li><strong>생산성 향상</strong>: 다양한 모듈과 자동 구성 기능을 통해 개발 시간을 단축.</li>
+</ul>
+</li>
+<li><strong>핵심 철학</strong>: <strong>IoC(Inversion of Control)</strong></li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ioc-inversion-of-control---제어의-역전">IoC (Inversion of Control - 제어의 역전)<a href="#ioc-inversion-of-control---제어의-역전" class="hash-link" aria-label="Direct link to IoC (Inversion of Control - 제어의 역전)" title="Direct link to IoC (Inversion of Control - 제어의 역전)">​</a></h3>
+<p><strong>IoC</strong>는 객체의 생성, 생명 주기 관리, 의존성 관계 설정 등을 개발자가 아닌 **프레임워크(Spring 컨테이너)**가 대신 처리하는 디자인 원칙입니다. 개발자는 객체 간의 의존성을 직접 생성하거나 관리하지 않고, 필요한 객체를 선언만 하면 컨테이너가 주입해 줍니다.</p>
+<ul>
+<li><strong>IoC 컨테이너 (Spring Container)</strong>: Spring 프레임워크의 핵심으로, 객체(Bean)의 생명 주기를 관리하고, 객체 간의 의존성을 주입(DI)합니다. 대표적인 컨테이너 구현체는 <code>BeanFactory</code>와 <code>ApplicationContext</code>가 있습니다.<!-- -->
+<ul>
+<li><strong><code>BeanFactory</code></strong>: 가장 기본적인 컨테이너로, Bean을 지연 로딩(Lazy Loading)합니다.</li>
+<li><strong><code>ApplicationContext</code></strong>: <code>BeanFactory</code>를 확장한 것으로, Bean을 즉시 로딩(Eager Loading)하며, 더 많은 엔터프라이즈 특화 기능(메시지 소스 처리, 이벤트 발행 등)을 제공합니다. 스프링 개발에서 주로 사용됩니다.</li>
+</ul>
+</li>
+<li><strong>장점</strong>:<!-- -->
+<ul>
+<li><strong>결합도(Coupling) 감소</strong>: 객체 간의 의존성을 직접 관리하지 않아 코드의 결합도가 낮아집니다.</li>
+<li><strong>유연성 및 확장성</strong>: 구성 변경이 용이하고, 새로운 기능을 추가하기 쉽습니다.</li>
+<li><strong>테스트 용이성</strong>: Mock 객체 주입 등을 통해 단위 테스트가 쉬워집니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="di-dependency-injection---의존성-주입">DI (Dependency Injection - 의존성 주입)<a href="#di-dependency-injection---의존성-주입" class="hash-link" aria-label="Direct link to DI (Dependency Injection - 의존성 주입)" title="Direct link to DI (Dependency Injection - 의존성 주입)">​</a></h3>
+<p><strong>DI</strong>는 <strong>IoC의 구체적인 구현 방법 중 하나</strong>로, 객체가 필요로 하는 의존 객체를 직접 생성하거나 찾는 대신, 외부(Spring 컨테이너)에서 주입해 주는 디자인 패턴입니다.</p>
+<ul>
+<li><strong>의존성 주입 방법</strong>:<!-- -->
+<ul>
+<li><strong>생성자 주입 (Constructor Injection)</strong>: 생성자를 통해 의존성을 주입받는 가장 권장되는 방식입니다. 객체의 불변성(Immutability)을 보장하고 순환 참조를 방지할 수 있습니다. (<code>@Autowired</code>를 생성자에 사용)</li>
+<li><strong>Setter 주입 (Setter Injection)</strong>: Setter 메서드를 통해 의존성을 주입받습니다. 객체의 필드를 변경 가능하게 하여 유연성이 높지만, 런타임에 의존성이 변경될 가능성이 있습니다. (<code>@Autowired</code>를 Setter에 사용)</li>
+<li><strong>필드 주입 (Field Injection)</strong>: 필드에 직접 의존성을 주입받는 방식입니다. 코드가 간결하지만, 테스트가 어렵고 결합도가 높아지는 단점이 있어 비권장됩니다. (<code>@Autowired</code>를 필드에 사용)</li>
+</ul>
+</li>
+<li><strong><code>@Autowired</code></strong>: Spring에서 의존성 주입을 자동으로 처리해주는 어노테이션입니다. <code>byType</code> 방식으로 동작합니다.</li>
+<li><strong><code>@Resource</code>, <code>@Inject</code></strong>: 다른 의존성 주입 어노테이션으로, 각각 JSR-250, JSR-330 표준을 따릅니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aop-aspect-oriented-programming---관점-지향-프로그래밍">AOP (Aspect-Oriented Programming - 관점 지향 프로그래밍)<a href="#aop-aspect-oriented-programming---관점-지향-프로그래밍" class="hash-link" aria-label="Direct link to AOP (Aspect-Oriented Programming - 관점 지향 프로그래밍)" title="Direct link to AOP (Aspect-Oriented Programming - 관점 지향 프로그래밍)">​</a></h3>
+<p><strong>AOP</strong>는 애플리케이션의 **핵심 비즈니스 로직과 분리될 수 있는 부가 기능(횡단 관심사, Cross-cutting Concerns)**을 모듈화하여 관리하는 프로그래밍 패러다임입니다. 로깅, 트랜잭션, 보안 등이 대표적인 횡단 관심사입니다.</p>
+<ul>
+<li><strong>주요 개념</strong>:<!-- -->
+<ul>
+<li><strong>횡단 관심사 (Cross-cutting Concern)</strong>: 여러 모듈에 걸쳐 공통적으로 나타나는 기능.</li>
+<li><strong>Aspect (애스펙트)</strong>: 횡단 관심사를 모듈화한 단위. Advice와 Pointcut의 조합.</li>
+<li><strong>Advice (어드바이스)</strong>: 애스펙트가 제공하는 실제 기능(코드). 언제(When) 무엇을(What) 할지 정의.<!-- -->
+<ul>
+<li><code>@Before</code>: 조인 포인트 실행 전</li>
+<li><code>@After</code>: 조인 포인트 실행 후 (정상/예외 여부 무관)</li>
+<li><code>@AfterReturning</code>: 조인 포인트 정상 실행 후</li>
+<li><code>@AfterThrowing</code>: 조인 포인트 예외 발생 시</li>
+<li><code>@Around</code>: 조인 포인트 실행 전/후 모두 제어 (가장 강력)</li>
+</ul>
+</li>
+<li><strong>Join Point (조인 포인트)</strong>: Advice를 적용할 수 있는 지점 (메서드 실행, 객체 생성 등). Spring AOP는 메서드 실행 조인 포인트만 지원.</li>
+<li><strong>Pointcut (포인트컷)</strong>: Join Point 중 Advice가 실제로 적용될 지점을 정의하는 표현식. (예: <code>execution(* com.example..*.*(..))</code>)</li>
+<li><strong>Target (타겟)</strong>: Advice를 적용받는 객체(클래스).</li>
+<li><strong>Proxy (프록시)</strong>: Target 객체를 감싸서 Advice를 적용하는 객체. Spring AOP는 기본적으로 JDK 동적 프록시 또는 CGLIB 프록시를 사용.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="psa-portable-service-abstraction---이식-가능한-서비스-추상화">PSA (Portable Service Abstraction - 이식 가능한 서비스 추상화)<a href="#psa-portable-service-abstraction---이식-가능한-서비스-추상화" class="hash-link" aria-label="Direct link to PSA (Portable Service Abstraction - 이식 가능한 서비스 추상화)" title="Direct link to PSA (Portable Service Abstraction - 이식 가능한 서비스 추상화)">​</a></h3>
+<p><strong>PSA</strong>는 Spring이 제공하는 일관된 서비스 인터페이스 추상화 계층입니다. 개발자는 특정 기술(JPA, JMS 등)에 직접 의존하지 않고, Spring이 제공하는 추상화 인터페이스를 통해 일관된 방식으로 서비스를 사용할 수 있습니다. 이를 통해 구현 기술이 변경되어도 애플리케이션 코드의 수정 없이 유연하게 대응할 수 있습니다.</p>
+<ul>
+<li><strong>예시</strong>:<!-- -->
+<ul>
+<li><strong>트랜잭션 추상화</strong>: <code>@Transactional</code> 어노테이션을 통해 어떤 트랜잭션 매니저(JPA, JDBC 등)를 사용하든 동일한 방식으로 트랜잭션을 관리할 수 있습니다.</li>
+<li><strong>캐시 추상화</strong>: <code>@Cacheable</code>, <code>@CacheEvict</code> 등을 통해 CacheManager 구현체(Ehcache, Redis Cache 등)와 상관없이 캐싱 기능을 사용할 수 있습니다.</li>
+<li><strong>JDBC 추상화</strong>: <code>JdbcTemplate</code>을 통해 JDBC API의 복잡성을 줄이고 예외를 추상화합니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="spring-mvc-model-view-controller">Spring MVC (Model-View-Controller)<a href="#spring-mvc-model-view-controller" class="hash-link" aria-label="Direct link to Spring MVC (Model-View-Controller)" title="Direct link to Spring MVC (Model-View-Controller)">​</a></h3>
+<p><strong>Spring MVC</strong>는 웹 애플리케이션 개발을 위한 Spring Framework의 모듈입니다. 웹 요청을 처리하는 데 사용되는 MVC(Model-View-Controller) 디자인 패턴을 구현합니다.</p>
+<ul>
+<li>
+<p><strong>주요 구성 요소 및 동작 흐름</strong>:</p>
+<ol>
+<li><strong>DispatcherServlet</strong>: 모든 웹 요청을 가장 먼저 받는 프런트 컨트롤러입니다. 요청을 분석하고 적절한 핸들러에게 위임합니다.</li>
+<li><strong>HandlerMapping</strong>: 요청 URL을 기반으로 적절한 핸들러(Controller 메서드)를 찾아 DispatcherServlet에 반환합니다.</li>
+<li><strong>Controller</strong>: 실제 비즈니스 로직을 수행하고, 처리 결과를 Model에 담아 View Name을 반환합니다. (<code>@Controller</code>, <code>@RestController</code>)</li>
+<li><strong>ModelAndView</strong>: Controller가 반환하는 데이터(Model)와 뷰 이름(View Name)을 담는 객체입니다.</li>
+<li><strong>ViewResolver</strong>: Controller가 반환한 View Name을 기반으로 실제 View 객체를 찾아 반환합니다.</li>
+<li><strong>View</strong>: Model의 데이터를 사용하여 최종 화면을 렌더링합니다. (JSP, Thymeleaf, Freemarker 등)</li>
+</ol>
+</li>
+<li>
+<p><strong>핵심 어노테이션</strong>:</p>
+<ul>
+<li><code>@Controller</code>: 해당 클래스가 웹 요청을 처리하는 컨트롤러임을 명시.</li>
+<li><code>@RestController</code>: <code>@Controller</code> + <code>@ResponseBody</code> (API 개발 시 JSON/XML 응답을 쉽게 보낼 수 있도록 함).</li>
+<li><code>@RequestMapping</code>: 요청 URL과 HTTP 메서드를 매핑.</li>
+<li><code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PutMapping</code>, <code>@DeleteMapping</code>: <code>@RequestMapping</code>의 축약형.</li>
+<li><code>@RequestParam</code>: HTTP 요청 파라미터를 메서드 파라미터에 바인딩.</li>
+<li><code>@RequestBody</code>: HTTP 요청 본문(JSON, XML 등)을 객체로 바인딩.</li>
+<li><code>@ResponseBody</code>: 메서드 반환 값을 HTTP 응답 본문으로 직접 전송 (주로 JSON/XML).</li>
+<li><code>@PathVariable</code>: URL 경로 변수를 메서드 파라미터에 바인딩.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="spring-data-jpa-java-persistence-api">Spring Data JPA (Java Persistence API)<a href="#spring-data-jpa-java-persistence-api" class="hash-link" aria-label="Direct link to Spring Data JPA (Java Persistence API)" title="Direct link to Spring Data JPA (Java Persistence API)">​</a></h3>
+<p><strong>Spring Data JPA</strong>는 JPA(Java Persistence API)를 더 쉽게 사용할 수 있도록 추상화 계층을 제공하는 Spring의 모듈입니다. Repositories 개념을 도입하여 데이터 접근 계층(DAO) 구현을 크게 단순화합니다.</p>
+<ul>
+<li><strong>JPA (Java Persistence API)</strong>: 자바 객체와 관계형 데이터베이스 간의 매핑을 정의하는 표준 명세입니다. ORM(Object-Relational Mapping) 기술의 한 종류입니다.</li>
+<li><strong>ORM (Object-Relational Mapping)</strong>: 객체 지향 프로그래밍 언어의 객체와 관계형 데이터베이스의 데이터를 자동으로 매핑하는 기술입니다.<!-- -->
+<ul>
+<li><strong>장점</strong>:<!-- -->
+<ul>
+<li>SQL 중심 개발에서 객체 중심 개발로 전환.</li>
+<li>생산성 향상 (반복적인 SQL 코드 감소).</li>
+<li>유지보수성 향상.</li>
+<li>패러다임 불일치(객체와 관계형 DB) 해소.</li>
+</ul>
+</li>
+<li><strong>단점</strong>:<!-- -->
+<ul>
+<li>복잡한 쿼리 시 성능 문제 발생 가능.</li>
+<li>학습 곡선.</li>
+<li>완벽한 ORM은 어려움.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><code>Repository</code> 인터페이스</strong>: Spring Data JPA가 제공하는 인터페이스로, 기본적인 CRUD(Create, Read, Update, Delete) 메서드를 자동으로 제공합니다. 개발자는 인터페이스만 정의하고, Spring이 런타임에 구현체를 생성합니다.<!-- -->
+<ul>
+<li><code>JpaRepository&lt;T, ID&gt;</code>: 기본적인 CRUD 및 페이징, 정렬 기능을 제공하는 가장 많이 사용되는 인터페이스.</li>
+<li><strong>쿼리 메서드 (Query Methods)</strong>: 메서드 이름 규칙을 통해 복잡한 쿼리를 자동으로 생성합니다. (예: <code>findByUsernameAndEmail(String username, String email)</code>)</li>
+<li><code>@Query</code> 어노테이션: JPQL(Java Persistence Query Language)이나 Native SQL을 직접 작성하여 복잡한 쿼리를 정의할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="spring-security">Spring Security<a href="#spring-security" class="hash-link" aria-label="Direct link to Spring Security" title="Direct link to Spring Security">​</a></h3>
+<p><strong>Spring Security</strong>는 Spring 기반 애플리케이션의 **인증(Authentication)**과 <strong>인가(Authorization)</strong> 기능을 제공하는 강력한 보안 프레임워크입니다.</p>
+<ul>
+<li><strong>인증 (Authentication)</strong>: 사용자가 누구인지 확인하는 과정. (로그인)</li>
+<li><strong>인가 (Authorization)</strong>: 인증된 사용자가 특정 리소스에 접근할 수 있는 권한이 있는지 확인하는 과정. (권한 부여)</li>
+<li><strong>주요 개념</strong>:<!-- -->
+<ul>
+<li><strong><code>FilterChainProxy</code></strong>: Spring Security의 핵심으로, 모든 요청을 가로채서 보안 필터 체인을 통해 처리합니다.</li>
+<li><strong><code>SecurityContextHolder</code></strong>: 현재 스레드의 보안 컨텍스트(인증 정보 등)를 저장하는 곳.</li>
+<li><strong><code>UserDetailsService</code></strong>: 사용자 정보를 DB 등에서 로드하는 인터페이스.</li>
+<li><strong><code>PasswordEncoder</code></strong>: 비밀번호 암호화 및 검증 인터페이스.</li>
+</ul>
+</li>
+<li><strong>활용</strong>: 로그인/로그아웃, 세션 관리, CSRF/XSS 방어, OAuth2, JWT 등</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="spring-boot">Spring Boot<a href="#spring-boot" class="hash-link" aria-label="Direct link to Spring Boot" title="Direct link to Spring Boot">​</a></h3>
+<p><strong>Spring Boot</strong>는 Spring Framework 기반의 <strong>독립 실행형(standalone) 프로덕션 등급 Spring 애플리케이션을 쉽게 만들 수 있도록 돕는 프로젝트</strong>입니다. Spring 개발의 초기 설정과 복잡성을 크게 줄여줍니다.</p>
+<ul>
+<li><strong>주요 특징</strong>:<!-- -->
+<ul>
+<li><strong>자동 구성(Auto-configuration)</strong>: 클래스패스에 있는 라이브러리, 빈(Bean) 등을 기반으로 애플리케이션 설정을 자동으로 추론하고 구성합니다.</li>
+<li><strong>내장형 서버</strong>: Tomcat, Jetty, Undertow 등의 웹 서버를 내장하고 있어 별도의 서버 설치가 필요 없습니다.</li>
+<li><strong>스타터 의존성(Starter Dependencies)</strong>: 공통적인 기능 묶음(웹, 데이터 JPA 등)을 미리 정의된 의존성으로 제공하여 설정 파일 수를 줄입니다. (예: <code>spring-boot-starter-web</code>)</li>
+<li><strong>외부 설정</strong>: YAML, <code>.properties</code> 파일 등을 통해 쉽게 설정을 변경할 수 있습니다.</li>
+<li><strong>액추에이터(Actuator)</strong>: 애플리케이션 모니터링 및 관리 기능을 제공합니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>이 정도면 Spring Framework의 핵심적인 개념들을 충분히 아우를 수 있다고 생각합니다. 면접이나 학습에 큰 도움이 되길 바랍니다! 추가적으로 궁금한 점이 있으신가요?</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/study-docs/spring.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/study-docs/docs/study-docs/nosql"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">NoSQL</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#spring-framework란" class="table-of-contents__link toc-highlight">Spring Framework란?</a></li><li><a href="#ioc-inversion-of-control---제어의-역전" class="table-of-contents__link toc-highlight">IoC (Inversion of Control - 제어의 역전)</a></li><li><a href="#di-dependency-injection---의존성-주입" class="table-of-contents__link toc-highlight">DI (Dependency Injection - 의존성 주입)</a></li><li><a href="#aop-aspect-oriented-programming---관점-지향-프로그래밍" class="table-of-contents__link toc-highlight">AOP (Aspect-Oriented Programming - 관점 지향 프로그래밍)</a></li><li><a href="#psa-portable-service-abstraction---이식-가능한-서비스-추상화" class="table-of-contents__link toc-highlight">PSA (Portable Service Abstraction - 이식 가능한 서비스 추상화)</a></li><li><a href="#spring-mvc-model-view-controller" class="table-of-contents__link toc-highlight">Spring MVC (Model-View-Controller)</a></li><li><a href="#spring-data-jpa-java-persistence-api" class="table-of-contents__link toc-highlight">Spring Data JPA (Java Persistence API)</a></li><li><a href="#spring-security" class="table-of-contents__link toc-highlight">Spring Security</a></li><li><a href="#spring-boot" class="table-of-contents__link toc-highlight">Spring Boot</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/study-docs/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/study-docs/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
