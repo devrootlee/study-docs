@@ -39,6 +39,16 @@
     * **격리성(Isolation)**: 여러 트랜잭션이 동시에 실행될 때, 각 트랜잭션은 독립적으로 실행되는 것처럼 보여야 합니다. 중간 결과가 다른 트랜잭션에 노출되지 않습니다.
     * **영속성(Durability)**: 트랜잭션이 성공적으로 완료되면, 그 결과는 시스템 오류(하드웨어 오류, 정전 등)와 관계없이 영구적으로 데이터베이스에 반영되어야 합니다.
 
+* **트랜잭션 사용 이유**:
+    * 데이터 무결성 보장 (ex: 결제, 주문 처리 등 여러 작업의 원자적 수행)
+    * 동시성 문제 방지 (ex: 재고 동시 감소 시 문제 해결)
+    * 장애 시 작업 복구 가능 (롤백)
+
+* **기술별 적용 예시**:
+    * Spring MVC + JPA: `@Transactional` 어노테이션 사용 (블로킹 방식)
+    * Spring WebFlux + R2DBC: `TransactionalOperator` 사용 (논블로킹 방식)
+    * MongoDB 4.0 이상: 세션 기반 트랜잭션 지원 (ReplicaSet 필요)
+
 ---
 
 ### 인덱스(Index)
@@ -109,19 +119,4 @@
     * **개체 무결성(Entity Integrity)**: 기본 키(Primary Key)는 `NULL` 값을 가질 수 없으며 중복될 수 없습니다.
     * **참조 무결성(Referential Integrity)**: 외래 키(Foreign Key)는 참조하는 기본 키의 값과 일치하거나 `NULL` 값을 가져야 합니다. (없는 값을 참조할 수 없음)
     * **도메인 무결성(Domain Integrity)**: 특정 컬럼의 값이 미리 정의된 도메인(데이터 타입, 범위, 형식)을 벗어날 수 없습니다.
-    * **사용자 정의 무결성(User-Defined Integrity)**: 특정 애플리케이션의 비즈니스 규칙에 따라 정의하는 제약 조건입니다. (예: `CHECK` 제약 조건)
-
----
-
-### SQL(Structured Query Language)
-
-**SQL**은 RDBMS에서 데이터를 정의(DDL), 조작(DML), 제어(DCL)하고 조회(DQL)하는 데 사용되는 **표준 언어**입니다.
-
-* **DDL (Data Definition Language - 데이터 정의어)**: 데이터베이스 객체(테이블, 뷰, 인덱스 등)를 생성, 수정, 삭제합니다.
-    * `CREATE`, `ALTER`, `DROP`, `TRUNCATE`
-* **DML (Data Manipulation Language - 데이터 조작어)**: 테이블의 데이터를 삽입, 수정, 삭제합니다.
-    * `INSERT`, `UPDATE`, `DELETE`
-* **DCL (Data Control Language - 데이터 제어어)**: 데이터 접근 권한을 부여하거나 회수하고, 트랜잭션을 제어합니다.
-    * `GRANT`, `REVOKE`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`
-* **DQL (Data Query Language - 데이터 질의어)**: 데이터를 조회합니다.
-    * `SELECT`
+    * **
