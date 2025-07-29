@@ -53,7 +53,23 @@ const sidebars = {
           label: 'Spring'
         }
       ]
-    }
+    },
+    {
+      type: 'category',
+      label: 'Algorithm',
+      items: [
+        {
+          type: 'doc',
+          id: 'study-docs/algorithm_sorting',
+          label: '정렬(Sorting)'
+        },
+        {
+          type: 'doc',
+          id: 'study-docs/algorithm_searching',
+          label: '탐색(Searching)'
+        }
+      ]
+    }    
   ],
 };
 

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-study-docs/java" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">JAVA 핵심 개념 정리 | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://devrootlee.github.io/study-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://devrootlee.github.io/study-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://devrootlee.github.io/study-docs/docs/study-docs/java"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="JAVA 핵심 개념 정리 | My Site"><meta data-rh="true" name="description" content="---"><meta data-rh="true" property="og:description" content="---"><link data-rh="true" rel="icon" href="/study-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://devrootlee.github.io/study-docs/docs/study-docs/java"><link data-rh="true" rel="alternate" href="https://devrootlee.github.io/study-docs/docs/study-docs/java" hreflang="en"><link data-rh="true" rel="alternate" href="https://devrootlee.github.io/study-docs/docs/study-docs/java" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"JAVA","item":"https://devrootlee.github.io/study-docs/docs/study-docs/java"}]}</script><link rel="alternate" type="application/rss+xml" href="/study-docs/blog/rss.xml" title="My Site RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/study-docs/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/study-docs/assets/css/styles.ba795a2b.css">
+<script src="/study-docs/assets/js/runtime~main.d7247228.js" defer="defer"></script>
+<script src="/study-docs/assets/js/main.692da098.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/study-docs/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/study-docs/"><div class="navbar__logo"><img src="/study-docs/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/study-docs/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">LeeRoot</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/study-docs/docs/study-docs/java">Study</a><a class="navbar__item navbar__link" href="/study-docs/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/study-docs/docs/study-docs/java">Language</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/study-docs/docs/study-docs/java">JAVA</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/study-docs/docs/study-docs/rdbms">Database</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/study-docs/docs/study-docs/spring">Framework</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/study-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Language</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">JAVA</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>JAVA 핵심 개념 정리</h1></header>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="자바java란-무엇인가">자바(JAVA)란 무엇인가?<a href="#자바java란-무엇인가" class="hash-link" aria-label="Direct link to 자바(JAVA)란 무엇인가?" title="Direct link to 자바(JAVA)란 무엇인가?">​</a></h3>
+<p>자바는 <strong>오라클</strong>에서 제공하는 <strong>객체 지향 프로그래밍 언어</strong>로, 강력한 <strong>플랫폼 독립성</strong>과 <strong>높은 안정성</strong>을 자랑합니다.</p>
+<ul>
+<li><strong>플랫폼 독립성</strong>: **JVM(Java Virtual Machine)**을 통해 &#x27;한 번 작성하면 어디서든 실행(Write Once, Run Anywhere)&#x27;이 가능합니다.</li>
+<li><strong>객체 지향 프로그래밍(OOP)</strong>: <strong>캡슐화, 상속, 다형성</strong>과 같은 OOP 특징을 지원하여 유지보수 및 재사용성이 뛰어납니다.</li>
+<li><strong>자동 메모리 관리</strong>: **가비지 컬렉션(Garbage Collection)**을 통해 사용하지 않는 메모리를 자동으로 회수합니다.</li>
+<li><strong>풍부한 라이브러리 및 프레임워크</strong>: Spring, Hibernate 등 강력한 프레임워크 덕분에 대규모 시스템 개발에 용이합니다.</li>
+<li><strong>멀티스레딩 지원</strong>: 멀티스레드를 기본 지원하여 동시성 프로그래밍을 쉽게 할 수 있습니다.</li>
+<li><strong>보안성</strong>: 바이트코드 검증과 샌드박스 실행 환경을 제공하여 높은 보안성을 가집니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="java의-동작-순서">JAVA의 동작 순서<a href="#java의-동작-순서" class="hash-link" aria-label="Direct link to JAVA의 동작 순서" title="Direct link to JAVA의 동작 순서">​</a></h3>
+<p>자바 코드가 실행되는 과정은 다음과 같습니다.</p>
+<ol>
+<li><strong>컴파일</strong>: **자바 컴파일러(<code>javac</code>)**가 자바 소스코드(<code>.java</code>)를 읽어 **자바 바이트코드(<code>.class</code>)**로 변환합니다.</li>
+<li><strong>클래스 로딩</strong>: <strong>Class Loader</strong>를 통해 <code>.class</code> 파일들이 <strong>JVM</strong>으로 로드됩니다.</li>
+<li><strong>실행</strong>: 로드된 <code>.class</code> 파일들이 <strong>Execution Engine</strong>을 통해 해석됩니다.</li>
+<li><strong>수행</strong>: 해석된 바이트코드는 <strong>Runtime Data Areas</strong>에 배치되어 실제 프로그램이 수행됩니다.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="jvm-구조-및-역할-심화">JVM 구조 및 역할 심화<a href="#jvm-구조-및-역할-심화" class="hash-link" aria-label="Direct link to JVM 구조 및 역할 심화" title="Direct link to JVM 구조 및 역할 심화">​</a></h3>
+<p>**JVM(Java Virtual Machine)**은 자바 바이트코드를 실행하는 가상 머신으로, 자바의 플랫폼 독립성을 가능하게 합니다.</p>
+<ul>
+<li><strong>클래스 로더 시스템 (Class Loader System)</strong>: <code>.class</code> 파일들을 JVM으로 동적으로 로드합니다. 로딩, 링크(검증, 준비, 분석), 초기화 단계를 거칩니다.</li>
+<li><strong>런타임 데이터 영역 (Runtime Data Areas)</strong>: 프로그램을 실행하기 위해 데이터를 보관하는 메모리 공간입니다.<!-- -->
+<ul>
+<li><strong>메서드 영역 (Method Area)</strong>: 클래스 정보(클래스, 인터페이스, 필드, 메서드, 생성자 정보 등)와 <code>static</code> 변수 등이 저장됩니다.</li>
+<li><strong>힙 영역 (Heap Area)</strong>: 인스턴스(객체)가 생성되는 공간입니다. 대부분의 객체는 여기에 저장되며, GC의 주된 대상입니다.</li>
+<li><strong>스택 영역 (Stack Area)</strong>: 메서드 호출 시 지역 변수, 파라미터, 리턴 주소 등이 임시로 저장되는 공간입니다. 메서드 호출마다 프레임이 생성되고, 메서드 종료 시 프레임이 제거됩니다.</li>
+<li><strong>PC 레지스터 (PC Register)</strong>: 현재 스레드가 실행될 JVM 명령어의 주소를 저장합니다.</li>
+<li><strong>네이티브 메서드 스택 (Native Method Stack)</strong>: 자바가 아닌 다른 언어(C/C++)로 작성된 네이티브 메서드의 호출 정보를 저장합니다.</li>
+</ul>
+</li>
+<li><strong>실행 엔진 (Execution Engine)</strong>: 로드된 바이트코드를 실행합니다.<!-- -->
+<ul>
+<li><strong>인터프리터 (Interpreter)</strong>: 바이트코드를 한 줄씩 읽어 바로 실행합니다.</li>
+<li><strong>JIT 컴파일러 (Just-In-Time Compiler)</strong>: 인터프리터의 비효율성을 개선하기 위해 도입되었습니다. 반복적으로 실행되는 코드를 감지하여 네이티브 코드로 컴파일하고 캐싱하여 다음 실행 시 빠르게 동작하도록 합니다.</li>
+<li><strong>가비지 컬렉터 (Garbage Collector)</strong>: 힙 영역에서 사용되지 않는 객체를 제거하여 메모리를 관리합니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gc-garbage-collection">GC (Garbage Collection)<a href="#gc-garbage-collection" class="hash-link" aria-label="Direct link to GC (Garbage Collection)" title="Direct link to GC (Garbage Collection)">​</a></h3>
+<p><strong>GC</strong>는 <strong>힙(Heap) 영역</strong>에서 더 이상 사용하지 않는 객체들을 자동으로 제거하는 작업입니다. 자바는 개발자가 메모리를 직접 해제할 수 없기 때문에, GC는 메모리 누수를 방지하고 효율적인 메모리 관리를 위해 필수적입니다.</p>
+<ul>
+<li><strong>동작 원리</strong>:<!-- -->
+<ul>
+<li><strong>Mark (마킹)</strong>: GC가 스택, 정적 변수 등 Root Set에서부터 객체를 추적하여 도달 가능한(Reachability) 객체들을 마킹합니다.</li>
+<li><strong>Sweep (제거)</strong>: 마킹되지 않은(도달 불가능한) 객체들을 힙에서 제거합니다.</li>
+<li><strong>Compact (압축)</strong>: 파편화된 메모리 공간을 한곳으로 모아 새로운 객체를 할당할 공간을 확보합니다. (선택 사항)</li>
+</ul>
+</li>
+<li><strong>Minor GC vs Major GC/Full GC</strong>:<!-- -->
+<ul>
+<li><strong>Minor GC</strong>: Young Generation(새로 생성된 객체들이 저장되는 공간)에서 발생하는 GC입니다. 비교적 짧은 시간 안에 자주 일어납니다.</li>
+<li><strong>Major GC / Full GC</strong>: Old Generation(오래 살아남은 객체들이 저장되는 공간)에서 발생하는 GC입니다. Minor GC보다 시간이 오래 걸리고 시스템에 부하를 줄 수 있습니다.</li>
+</ul>
+</li>
+<li><strong>GC 알고리즘</strong>: Mark-Sweep-Compact 외에도 Generational Collection, Serial GC, Parallel GC, CMS GC, G1 GC, Shenandoah GC, ZGC 등 다양한 알고리즘이 존재하며, 각각의 장단점이 있어 워크로드에 따라 적절한 GC를 선택하고 튜닝할 수 있습니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="제네릭generic">제네릭(Generic)<a href="#제네릭generic" class="hash-link" aria-label="Direct link to 제네릭(Generic)" title="Direct link to 제네릭(Generic)">​</a></h3>
+<p><strong>제네릭</strong>은 자바에서 <strong>타입(데이터 형식)을 파라미터화</strong>하여 사용하는 기능입니다. 클래스, 인터페이스, 메서드 등을 정의할 때 타입을 미리 지정하지 않고, 실제 사용할 때 타입을 지정하여 <strong>컴파일 시 타입 안정성</strong>을 확보하고 코드의 <strong>재사용성, 유지보수성</strong>을 향상시킬 수 있습니다.</p>
+<ul>
+<li><strong>장점</strong>:<!-- -->
+<ul>
+<li><strong>타입 안정성</strong>: 잘못된 타입의 객체가 저장되는 것을 컴파일 시점에서 방지합니다.</li>
+<li><strong>타입 체크 및 형 변환 생략</strong>: 불필요한 타입 캐스팅을 줄여 코드를 간결하게 합니다.</li>
+<li><strong>코드 재사용성</strong>: 하나의 코드로 여러 타입에 대응할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="어노테이션annotation">어노테이션(Annotation)<a href="#어노테이션annotation" class="hash-link" aria-label="Direct link to 어노테이션(Annotation)" title="Direct link to 어노테이션(Annotation)">​</a></h3>
+<p><strong>어노테이션</strong>은 코드에 <strong>메타 정보</strong>(코드 자체에 대한 추가 정보)를 추가하는 용도로 사용됩니다. 컴파일러에게 추가 정보를 제공하거나, 런타임 시 특정 도구나 프레임워크가 해당 메타 정보를 사용하여 코드를 처리하는 데 도움을 줍니다.</p>
+<ul>
+<li><strong>주요 용도</strong>:<!-- -->
+<ul>
+<li><strong>컴파일러 정보 제공</strong>: 컴파일러 경고 억제(<code>@SuppressWarnings</code>), 오버라이드 여부(<code>@Override</code>) 등</li>
+<li><strong>코드 생성 또는 처리</strong>: Lombok 같은 라이브러리가 어노테이션을 통해 코드를 자동 생성</li>
+<li><strong>런타임 처리</strong>: Spring의 <code>@Autowired</code>, <code>@Controller</code> 등 프레임워크가 런타임에 어노테이션 정보를 읽어 동작을 제어</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="오버라이딩overriding-vs-오버로딩overloading">오버라이딩(Overriding) vs 오버로딩(Overloading)<a href="#오버라이딩overriding-vs-오버로딩overloading" class="hash-link" aria-label="Direct link to 오버라이딩(Overriding) vs 오버로딩(Overloading)" title="Direct link to 오버라이딩(Overriding) vs 오버로딩(Overloading)">​</a></h3>
+<ul>
+<li><strong>오버라이딩(Overriding)</strong>: <strong>상속 관계</strong>에서 부모 클래스의 메서드를 자식 클래스에서 <strong>재정의</strong>하는 것입니다. 메서드의 이름, 반환 타입, 매개변수 목록이 모두 부모 메서드와 동일해야 합니다. 다형성(Polymorphism)을 구현하는 핵심 메커니즘입니다.</li>
+<li><strong>오버로딩(Overloading)</strong>: 하나의 클래스 내에서 <strong>동일한 이름</strong>의 메서드를 <strong>여러 번 정의</strong>하는 것입니다. 이때 매개변수의 개수, 타입, 순서 중 하나 이상이 달라야 합니다. 반환 타입은 오버로딩에 영향을 주지 않습니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="인터페이스interface-vs-추상-클래스abstract-class">인터페이스(Interface) vs 추상 클래스(Abstract Class)<a href="#인터페이스interface-vs-추상-클래스abstract-class" class="hash-link" aria-label="Direct link to 인터페이스(Interface) vs 추상 클래스(Abstract Class)" title="Direct link to 인터페이스(Interface) vs 추상 클래스(Abstract Class)">​</a></h3>
+<table><thead><tr><th style="text-align:left">특징</th><th style="text-align:left">인터페이스(Interface)</th><th style="text-align:left">추상 클래스(Abstract Class)</th></tr></thead><tbody><tr><td style="text-align:left"><strong>목적</strong></td><td style="text-align:left">구현 객체가 같은 동작을 한다는 것을 <strong>보장</strong> (행위의 규약)</td><td style="text-align:left">객체의 <strong>추상적인 상위 개념</strong>으로 공통된 특징 및 기능을 표현</td></tr><tr><td style="text-align:left"><strong>상속/구현</strong></td><td style="text-align:left">클래스는 다중 <strong>구현</strong> 가능 (implements)</td><td style="text-align:left">클래스는 단일 <strong>상속</strong>만 가능 (extends)</td></tr><tr><td style="text-align:left"><strong>관계</strong></td><td style="text-align:left">구현하는 객체 간에 <strong>관계가 없을 수 있음</strong> (예: <code>Runnable</code> 인터페이스를 구현하는 다양한 종류의 객체)</td><td style="text-align:left">상속하는 집합 간에 <strong>연관 관계</strong> (Is-a 관계)가 존재</td></tr><tr><td style="text-align:left"><strong>메서드</strong></td><td style="text-align:left">JDK 8부터 <code>default</code> 메서드(구현체 포함), <code>static</code> 메서드 추가. 그 이전엔 추상 메서드만 가능</td><td style="text-align:left">추상 메서드와 구현된 메서드 모두 포함 가능</td></tr><tr><td style="text-align:left"><strong>변수</strong></td><td style="text-align:left"><code>public static final</code> (상수)만 선언 가능</td><td style="text-align:left">일반 변수 및 상수 모두 선언 가능</td></tr><tr><td style="text-align:left"><strong>생성자</strong></td><td style="text-align:left">생성자 없음</td><td style="text-align:left">생성자 가질 수 있음 (하지만 직접 인스턴스화 불가능, 자식 클래스 생성 시 호출)</td></tr></tbody></table>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="객체instance-vs-클래스class">객체(Instance) vs 클래스(Class)<a href="#객체instance-vs-클래스class" class="hash-link" aria-label="Direct link to 객체(Instance) vs 클래스(Class)" title="Direct link to 객체(Instance) vs 클래스(Class)">​</a></h3>
+<ul>
+<li><strong>객체(Instance)</strong>: 소프트웨어 세계에 구현될 <strong>실체</strong>입니다. 구별 가능한 식별자(메모리 주소), 특징적인 행동(메서드), 변경 가능한 상태(필드 값)를 가집니다. 클래스로부터 생성된 인스턴스들을 통칭하는 용어로도 사용됩니다.</li>
+<li><strong>클래스(Class)</strong>: 객체를 정의하는 <strong>틀</strong> 또는 <strong>설계도</strong>와 같은 의미로 사용됩니다. 객체가 가져야 할 속성(필드)과 기능(메서드)을 정의하며, 클래스 없이는 객체를 생성할 수 없습니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="정적static-키워드">정적(Static) 키워드<a href="#정적static-키워드" class="hash-link" aria-label="Direct link to 정적(Static) 키워드" title="Direct link to 정적(Static) 키워드">​</a></h3>
+<p><code>static</code> 키워드는 객체 지향 프로그래밍에서 클래스에 속한 멤버(변수, 메서드, 이너 클래스, 초기화 블록 등)에 대한 특성을 정의합니다. <code>static</code>이 붙은 멤버는 <strong>객체마다 별도로 존재하는 것이 아니라</strong>, 클래스가 JVM에 로드될 때 <strong>한 번만 메모리(메서드 영역)에 할당</strong>되어 모든 객체에서 <strong>공유</strong>됩니다.</p>
+<ul>
+<li><strong>정적 변수 (Static Variable)</strong>: 모든 객체가 공유하는 변수입니다. 객체를 생성하지 않고도 <code>클래스명.변수명</code>으로 직접 접근할 수 있습니다.</li>
+<li><strong>정적 메서드 (Static Method)</strong>: 객체 생성 없이 <code>클래스명.메서드명()</code>으로 직접 호출할 수 있는 메서드입니다. <code>static</code> 메서드 내에서는 <code>static</code> 멤버만 직접 접근할 수 있고, <code>this</code> 키워드를 사용할 수 없습니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="기본형primitive-type-vs-참조형reference-type">기본형(Primitive Type) vs 참조형(Reference Type)<a href="#기본형primitive-type-vs-참조형reference-type" class="hash-link" aria-label="Direct link to 기본형(Primitive Type) vs 참조형(Reference Type)" title="Direct link to 기본형(Primitive Type) vs 참조형(Reference Type)">​</a></h3>
+<table><thead><tr><th style="text-align:left">특징</th><th style="text-align:left">기본형(Primitive Type)</th><th style="text-align:left">참조형(Reference Type)</th></tr></thead><tbody><tr><td style="text-align:left"><strong>저장 위치</strong></td><td style="text-align:left">값 자체를 <strong>스택(Stack) 영역</strong>에 저장</td><td style="text-align:left"><strong>힙(Heap) 영역</strong>에 객체 데이터를 저장하고, <strong>스택</strong>에는 해당 객체의 **주소값(참조값)**을 저장</td></tr><tr><td style="text-align:left"><strong>값 저장</strong></td><td style="text-align:left">실제 데이터 값</td><td style="text-align:left">객체의 메모리 주소(참조)</td></tr><tr><td style="text-align:left"><strong>종류</strong></td><td style="text-align:left"><code>byte</code>(1), <code>short</code>(2), <code>int</code>(4), <code>long</code>(8), <code>float</code>(4), <code>double</code>(8), <code>char</code>(2), <code>boolean</code>(1)</td><td style="text-align:left"><code>class</code>, <code>interface</code>, <code>array</code>, <code>enum</code>, <code>String</code>, Wrapper 클래스(<code>Character</code>, <code>Integer</code>, <code>Double</code> ~), Collection 프레임워크(<code>List</code>, <code>Map</code>, <code>Set</code> ~)</td></tr><tr><td style="text-align:left"><strong><code>null</code> 여부</strong></td><td style="text-align:left"><code>null</code> 값을 가질 수 없음 (각 타입의 기본값으로 초기화)</td><td style="text-align:left"><code>null</code> 값을 가질 수 있음</td></tr><tr><td style="text-align:left"><strong>크기</strong></td><td style="text-align:left">정해진 고정 크기 (예: <code>int</code> 4바이트)</td><td style="text-align:left">객체 내용에 따라 가변적이며, 주소값의 크기는 고정</td></tr></tbody></table>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="컬렉션-프레임워크collection-framework">컬렉션 프레임워크(Collection Framework)<a href="#컬렉션-프레임워크collection-framework" class="hash-link" aria-label="Direct link to 컬렉션 프레임워크(Collection Framework)" title="Direct link to 컬렉션 프레임워크(Collection Framework)">​</a></h3>
+<p><strong>자바 컬렉션 프레임워크</strong>는 널리 알려진 **자료구조(Data Structure)**와 **알고리즘(Algorithm)**을 바탕으로 객체나 데이터들을 효율적으로 저장, 관리, 검색할 수 있도록 제공되는 <strong>표준화된 라이브러리</strong>입니다.</p>
+<ul>
+<li><strong>주요 인터페이스</strong>:<!-- -->
+<ul>
+<li><strong><code>Collection</code> 인터페이스</strong>: 객체의 집합을 나타내는 최상위 인터페이스입니다. <code>List</code>와 <code>Set</code>이 상속받습니다.<!-- -->
+<ul>
+<li><strong><code>List</code></strong>: <strong>순서가 있는</strong> 데이터의 집합이며, <strong>중복을 허용</strong>합니다. (예: <code>ArrayList</code>, <code>LinkedList</code>, <code>Vector</code>)</li>
+<li><strong><code>Set</code></strong>: <strong>순서가 없으며</strong>, <strong>중복을 허용하지 않는</strong> 데이터의 집합입니다. (예: <code>HashSet</code>, <code>TreeSet</code>, <code>LinkedHashSet</code>)</li>
+</ul>
+</li>
+<li><strong><code>Map</code> 인터페이스</strong>: <code>Collection</code> 인터페이스와는 별도로 정의되며, <strong>키(Key)-값(Value) 쌍</strong>으로 데이터를 관리합니다. 키는 중복될 수 없지만 값은 중복될 수 있습니다. (예: <code>HashMap</code>, <code>TreeMap</code>, ``LinkedHashMap<code>, </code>Hashtable`)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="예외-처리-exception-handling">예외 처리 (Exception Handling)<a href="#예외-처리-exception-handling" class="hash-link" aria-label="Direct link to 예외 처리 (Exception Handling)" title="Direct link to 예외 처리 (Exception Handling)">​</a></h3>
+<p>**예외(Exception)**는 프로그램 실행 중 발생하는 오류나 예상치 못한 상황을 의미합니다. 자바의 예외 처리는 이러한 문제를 적절히 처리하여 프로그램의 안정성을 높이는 메커니즘입니다.</p>
+<ul>
+<li><strong><code>Error</code> vs <code>Exception</code></strong>:<!-- -->
+<ul>
+<li><strong><code>Error</code></strong>: 시스템 레벨에서 발생하는 심각한 오류로, 개발자가 직접 처리하기 어렵습니다. (예: <code>OutOfMemoryError</code>, <code>StackOverflowError</code>)</li>
+<li><strong><code>Exception</code></strong>: 프로그램 코드에 의해 발생하며, 개발자가 예측하고 처리할 수 있는 오류입니다.<!-- -->
+<ul>
+<li><strong>Checked Exception (확인 예외)</strong>: 컴파일 시점에서 확인되며, 반드시 <code>try-catch</code>로 처리하거나 <code>throws</code>로 선언해야 합니다. (예: <code>IOException</code>, <code>SQLException</code>)</li>
+<li><strong>Unchecked Exception (비확인 예외)</strong>: 런타임 시점에서 발생하며, 컴파일러가 예외 처리 여부를 강제하지 않습니다. 개발자의 실수로 인해 주로 발생합니다. (예: <code>NullPointerException</code>, <code>ArrayIndexOutOfBoundsException</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>예외 처리 구문</strong>:<!-- -->
+<ul>
+<li><strong><code>try-catch-finally</code></strong>: 예외 발생 가능성이 있는 코드를 <code>try</code> 블록에, 예외 발생 시 처리할 코드를 <code>catch</code> 블록에, 예외 발생 여부와 상관없이 항상 실행될 코드를 <code>finally</code> 블록에 작성합니다.</li>
+<li><strong><code>throws</code></strong>: 메서드 선언부에 사용하여 해당 메서드에서 발생할 수 있는 예외를 호출한 쪽에 던진다는 것을 명시합니다.</li>
+<li><strong><code>throw</code></strong>: 강제로 예외를 발생시킬 때 사용합니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="동시성concurrency-및-멀티스레딩-심화">동시성(Concurrency) 및 멀티스레딩 심화<a href="#동시성concurrency-및-멀티스레딩-심화" class="hash-link" aria-label="Direct link to 동시성(Concurrency) 및 멀티스레딩 심화" title="Direct link to 동시성(Concurrency) 및 멀티스레딩 심화">​</a></h3>
+<p><strong>멀티스레딩</strong>은 하나의 프로세스 내에서 여러 개의 스레드가 동시에 작업을 수행하여 시스템 자원을 효율적으로 사용하고 응답성을 높이는 기술입니다. **동시성(Concurrency)**은 여러 작업이 동시에 실행되는 것처럼 보이게 하는 개념입니다.</p>
+<ul>
+<li><strong><code>synchronized</code> 키워드</strong>: 멀티스레드 환경에서 공유 자원에 대한 접근을 제어하여 <strong>스레드 동기화</strong>를 보장합니다. 메서드나 블록에 사용하여 한 번에 하나의 스레드만 해당 코드 영역을 실행할 수 있도록 락(Lock)을 겁니다.</li>
+<li><strong><code>volatile</code> 키워드</strong>: 변수의 값을 메인 메모리에 직접 동기화하도록 강제하여, 여러 스레드가 변수 값을 캐시하지 않고 항상 최신 값을 읽도록 보장합니다. 스레드 가시성 문제를 해결합니다.</li>
+<li><strong>스레드 동기화 문제</strong>:<!-- -->
+<ul>
+<li><strong>경쟁 조건 (Race Condition)</strong>: 여러 스레드가 동시에 공유 자원에 접근하여 예상치 못한 결과를 초래하는 문제.</li>
+<li><strong>데드락 (Deadlock)</strong>: 두 개 이상의 스레드가 서로의 락을 기다리며 영원히 멈춰버리는 현상.</li>
+</ul>
+</li>
+<li><strong><code>java.util.concurrent</code> 패키지</strong>: 자바 5부터 추가된 동시성 유틸리티 패키지로, 스레드 풀, 큐, 동기화 도구 등을 제공하여 복잡한 동시성 프로그래밍을 더 쉽게 할 수 있도록 돕습니다. (예: <code>ExecutorService</code>, <code>Future</code>, <code>Semaphore</code>, <code>CountDownLatch</code>)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="객체-지향-프로그래밍oop-5대-원칙-solid">객체 지향 프로그래밍(OOP) 5대 원칙 (SOLID)<a href="#객체-지향-프로그래밍oop-5대-원칙-solid" class="hash-link" aria-label="Direct link to 객체 지향 프로그래밍(OOP) 5대 원칙 (SOLID)" title="Direct link to 객체 지향 프로그래밍(OOP) 5대 원칙 (SOLID)">​</a></h3>
+<p>OOP의 설계 원칙으로, 유지보수와 확장이 쉬운 시스템을 구축하는 데 도움이 됩니다.</p>
+<ul>
+<li><strong>SRP (Single Responsibility Principle - 단일 책임 원칙)</strong>: 클래스는 오직 하나의 책임만 가져야 합니다.</li>
+<li><strong>OCP (Open-Closed Principle - 개방-폐쇄 원칙)</strong>: 확장에 대해서는 개방되어 있고, 변경에 대해서는 폐쇄되어야 합니다. (기존 코드를 변경하지 않고 기능을 확장할 수 있어야 함)</li>
+<li><strong>LSP (Liskov Substitution Principle - 리스코프 치환 원칙)</strong>: 부모 클래스와 자식 클래스 간에는 행위의 호환성이 있어야 합니다. 즉, 부모 타입의 객체를 자식 타입의 객체로 치환해도 프로그램의 동작이 일관되어야 합니다.</li>
+<li><strong>ISP (Interface Segregation Principle - 인터페이스 분리 원칙)</strong>: 클라이언트는 자신이 사용하지 않는 인터페이스에 의존해서는 안 됩니다. (큰 인터페이스를 작은 인터페이스로 분리)</li>
+<li><strong>DIP (Dependency Inversion Principle - 의존성 역전 원칙)</strong>: 고수준 모듈은 저수준 모듈에 의존해서는 안 되며, 둘 다 추상화에 의존해야 합니다. 추상화는 세부 사항에 의존해서는 안 되며, 세부 사항이 추상화에 의존해야 합니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="직렬화serialization">직렬화(Serialization)<a href="#직렬화serialization" class="hash-link" aria-label="Direct link to 직렬화(Serialization)" title="Direct link to 직렬화(Serialization)">​</a></h3>
+<p><strong>직렬화</strong>는 자바 객체를 바이트 스트림으로 변환하여 파일에 저장하거나 네트워크를 통해 전송할 수 있도록 하는 과정입니다. 반대로 바이트 스트림을 다시 객체로 변환하는 것을 **역직렬화(Deserialization)**라고 합니다.</p>
+<ul>
+<li><strong>목적</strong>:<!-- -->
+<ul>
+<li>객체를 영속적으로 저장 (파일 시스템에 저장)</li>
+<li>다른 JVM이나 다른 시스템으로 객체 전송</li>
+</ul>
+</li>
+<li><strong>구현</strong>: <code>java.io.Serializable</code> 인터페이스를 구현하는 것으로 간단하게 직렬화가 가능합니다.</li>
+<li><strong><code>transient</code> 키워드</strong>: 직렬화 과정에서 특정 필드를 제외하고 싶을 때 사용합니다. <code>transient</code>로 선언된 필드는 직렬화되지 않습니다.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="스트림stream-api">스트림(Stream API)<a href="#스트림stream-api" class="hash-link" aria-label="Direct link to 스트림(Stream API)" title="Direct link to 스트림(Stream API)">​</a></h3>
+<p><strong>자바 8</strong>부터 추가된 <strong>Stream API</strong>는 컬렉션이나 배열 등의 데이터를 <strong>선언형</strong>으로 처리할 수 있는 기능을 제공합니다. 데이터를 추상화하여 필터링, 매핑, 정렬 등 다양한 연산을 파이프라인 형태로 연결하여 처리할 수 있게 합니다.</p>
+<ul>
+<li><strong>특징</strong>:<!-- -->
+<ul>
+<li><strong>원본 데이터를 변경하지 않음</strong>: 스트림 연산은 새로운 스트림을 생성하며, 원본 데이터는 보존됩니다.</li>
+<li><strong>내부 반복</strong>: 반복문을 직접 작성하지 않고도 컬렉션의 요소를 처리합니다.</li>
+<li><strong>지연 연산 (Lazy Evaluation)</strong>: 최종 연산이 호출되기 전까지는 중간 연산이 실행되지 않습니다.</li>
+<li><strong>병렬 처리 가능</strong>: 병렬 스트림을 통해 멀티코어 프로세서의 이점을 활용할 수 있습니다.</li>
+</ul>
+</li>
+<li><strong>구성</strong>:<!-- -->
+<ul>
+<li><strong>스트림 생성</strong>: 컬렉션의 <code>stream()</code> 메서드, <code>Arrays.stream()</code>, <code>Stream.of()</code> 등</li>
+<li><strong>중간 연산 (Intermediate Operations)</strong>: 스트림을 변환하거나 필터링하는 연산으로, 스트림을 반환하여 연속적으로 연결 가능합니다. (예: <code>filter()</code>, <code>map()</code>, <code>sorted()</code>, <code>distinct()</code>)</li>
+<li><strong>최종 연산 (Terminal Operations)</strong>: 스트림 파이프라인을 종료하고 결과를 생성합니다. (예: <code>forEach()</code>, <code>collect()</code>, <code>reduce()</code>, <code>count()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code>)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="optional-클래스">Optional 클래스<a href="#optional-클래스" class="hash-link" aria-label="Direct link to Optional 클래스" title="Direct link to Optional 클래스">​</a></h3>
+<p><strong>자바 8</strong>에 도입된 <code>Optional</code> 클래스는 <strong><code>null</code> 값을 안전하게 다루기 위한</strong> 컨테이너 클래스입니다. <code>null</code>이 올 수 있는 값을 감싸서 <code>null</code> 포인터 예외(<code>NullPointerException</code>)를 방지하고, 코드의 가독성을 높여줍니다.</p>
+<ul>
+<li><strong>주요 메서드</strong>:<!-- -->
+<ul>
+<li><code>Optional.of(value)</code>: <code>null</code>이 아닌 값을 포함하는 Optional 생성. (값이 <code>null</code>이면 <code>NullPointerException</code> 발생)</li>
+<li><code>Optional.ofNullable(value)</code>: <code>null</code>일 수도 있는 값을 포함하는 Optional 생성.</li>
+<li><code>isPresent()</code>: Optional이 값을 포함하고 있는지 여부를 반환.</li>
+<li><code>get()</code>: Optional에 포함된 값을 반환. (값이 없으면 <code>NoSuchElementException</code> 발생)</li>
+<li><code>orElse(defaultValue)</code>: 값이 없으면 기본값을 반환.</li>
+<li><code>ifPresent(consumer)</code>: 값이 있으면 Consumer 람다식을 실행.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="람다식lambda-expression">람다식(Lambda Expression)<a href="#람다식lambda-expression" class="hash-link" aria-label="Direct link to 람다식(Lambda Expression)" title="Direct link to 람다식(Lambda Expression)">​</a></h3>
+<p><strong>자바 8</strong>에서 도입된 <strong>람다식</strong>은 익명 함수를 간결하게 표현하는 방법입니다. 코드를 간략화하고, 컬렉션 처리와 같은 부분에서 함수형 프로그래밍 스타일을 가능하게 합니다.</p>
+<ul>
+<li><strong>특징</strong>:<!-- -->
+<ul>
+<li><strong>익명 함수</strong>: 이름이 없는 함수입니다.</li>
+<li><strong>함수형 인터페이스</strong>: 람다식은 하나의 추상 메서드만 가진 <strong>함수형 인터페이스</strong>의 구현체로 사용됩니다.</li>
+<li><strong>코드 간결화</strong>: 불필요한 코드(클래스 선언, 메서드 오버라이드 등)를 줄여 코드를 간결하게 만듭니다.</li>
+</ul>
+</li>
+<li><strong>기본 문법</strong>: <code>(매개변수) -&gt; { 실행코드 }</code></li>
+<li><strong>익명 클래스와의 비교</strong>: 익명 클래스보다 훨씬 간결하게 코드를 작성할 수 있으며, 클로저(Closure)를 지원합니다.</li>
+</ul>
+<hr></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/study-docs/java.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/study-docs/docs/study-docs/rdbms"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">RDBMS</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#자바java란-무엇인가" class="table-of-contents__link toc-highlight">자바(JAVA)란 무엇인가?</a></li><li><a href="#java의-동작-순서" class="table-of-contents__link toc-highlight">JAVA의 동작 순서</a></li><li><a href="#jvm-구조-및-역할-심화" class="table-of-contents__link toc-highlight">JVM 구조 및 역할 심화</a></li><li><a href="#gc-garbage-collection" class="table-of-contents__link toc-highlight">GC (Garbage Collection)</a></li><li><a href="#제네릭generic" class="table-of-contents__link toc-highlight">제네릭(Generic)</a></li><li><a href="#어노테이션annotation" class="table-of-contents__link toc-highlight">어노테이션(Annotation)</a></li><li><a href="#오버라이딩overriding-vs-오버로딩overloading" class="table-of-contents__link toc-highlight">오버라이딩(Overriding) vs 오버로딩(Overloading)</a></li><li><a href="#인터페이스interface-vs-추상-클래스abstract-class" class="table-of-contents__link toc-highlight">인터페이스(Interface) vs 추상 클래스(Abstract Class)</a></li><li><a href="#객체instance-vs-클래스class" class="table-of-contents__link toc-highlight">객체(Instance) vs 클래스(Class)</a></li><li><a href="#정적static-키워드" class="table-of-contents__link toc-highlight">정적(Static) 키워드</a></li><li><a href="#기본형primitive-type-vs-참조형reference-type" class="table-of-contents__link toc-highlight">기본형(Primitive Type) vs 참조형(Reference Type)</a></li><li><a href="#컬렉션-프레임워크collection-framework" class="table-of-contents__link toc-highlight">컬렉션 프레임워크(Collection Framework)</a></li><li><a href="#예외-처리-exception-handling" class="table-of-contents__link toc-highlight">예외 처리 (Exception Handling)</a></li><li><a href="#동시성concurrency-및-멀티스레딩-심화" class="table-of-contents__link toc-highlight">동시성(Concurrency) 및 멀티스레딩 심화</a></li><li><a href="#객체-지향-프로그래밍oop-5대-원칙-solid" class="table-of-contents__link toc-highlight">객체 지향 프로그래밍(OOP) 5대 원칙 (SOLID)</a></li><li><a href="#직렬화serialization" class="table-of-contents__link toc-highlight">직렬화(Serialization)</a></li><li><a href="#스트림stream-api" class="table-of-contents__link toc-highlight">스트림(Stream API)</a></li><li><a href="#optional-클래스" class="table-of-contents__link toc-highlight">Optional 클래스</a></li><li><a href="#람다식lambda-expression" class="table-of-contents__link toc-highlight">람다식(Lambda Expression)</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/study-docs/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/study-docs/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
